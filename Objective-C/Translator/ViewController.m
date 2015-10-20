@@ -101,7 +101,7 @@
   NSDictionary * language = [jsonLanguages objectAtIndex:selection];
   NSString * languageCode = [language objectForKey:@"language"];
 
-  NSString * urlString = [NSString stringWithFormat:@"http://www.syslang.com/frengly/controller?action=translateREST&src=en&dest=%@&text=%@&username=%@&password=%@",
+  NSString * urlString = [NSString stringWithFormat:@"http://frengly.com/frengly/controller?action=translateREST&src=en&dest=%@&text=%@&username=%@&password=%@",
     languageCode,
     [self.original.text
       stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],
