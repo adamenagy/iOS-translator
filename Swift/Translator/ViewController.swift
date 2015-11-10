@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 class ViewController: UIViewController,
-  UIPickerViewDelegate, UIPickerViewDataSource {
+UIPickerViewDelegate, UIPickerViewDataSource {
   
   var jsonLanguages: NSArray?
   @IBOutlet weak var languages: UIPickerView!
@@ -36,7 +36,7 @@ class ViewController: UIViewController,
   
   func updateLanguages() throws {
     // Get the supported languages
-
+    
     // URL can be checked in browser
     let urlString = "https://www.googleapis.com/language/translate/v2/languages?key=\(Credentials.GOOGLE_API_KEY)&target=en"
     let url = NSURL(string: urlString)!

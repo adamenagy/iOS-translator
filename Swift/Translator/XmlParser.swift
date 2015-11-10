@@ -9,7 +9,7 @@
 import Foundation
 
 class XmlParser: NSXMLParser,
-  NSXMLParserDelegate {
+NSXMLParserDelegate {
   
   var translationTag: Bool = false
   var translation: String = ""
