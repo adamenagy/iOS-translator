@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmx-i7-yYN">
+                                <rect key="frame" x="200" y="59" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GSc-5d-ROP"/>
+                                    <constraint firstAttribute="height" constant="30" id="eXq-4a-yOx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GSc-5d-ROP"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <pickerView opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJG-JC-lNw">
+                                <rect key="frame" x="0.0" y="299" width="600" height="301"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="crg-S7-O7a"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="WOA-JW-F8W"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txm-bG-IsC">
+                                <rect key="frame" x="200" y="129" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KOX-vT-yOa"/>
+                                    <constraint firstAttribute="width" constant="200" id="dcv-hU-rw8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y40-3i-AI9">
+                                <rect key="frame" x="200" y="182" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ibQ-7j-g6o"/>
+                                    <constraint firstAttribute="width" constant="200" id="uOh-uG-bS2"/>
+                                </constraints>
+                                <state key="normal" title="Translate"/>
+                                <connections>
+                                    <action selector="translate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JiG-dn-fJO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qJG-JC-lNw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1Og-Mm-ZAC"/>
+                            <constraint firstItem="xmx-i7-yYN" firstAttribute="trailing" secondItem="Txm-bG-IsC" secondAttribute="trailing" id="2nD-gB-ZtB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qJG-JC-lNw" secondAttribute="trailing" constant="-20" id="6vP-Dr-fgP" userLabel="Languages.trailing = trailing"/>
+                            <constraint firstItem="Txm-bG-IsC" firstAttribute="top" secondItem="xmx-i7-yYN" secondAttribute="bottom" constant="40" id="7cG-W8-lVP"/>
+                            <constraint firstItem="xmx-i7-yYN" firstAttribute="leading" secondItem="Txm-bG-IsC" secondAttribute="leading" id="GJJ-2h-EsE"/>
+                            <constraint firstItem="Txm-bG-IsC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="129" id="GPu-Q9-7Cd"/>
+                            <constraint firstItem="Txm-bG-IsC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ki4-bd-Vd7"/>
+                            <constraint firstItem="qJG-JC-lNw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="LGS-Hy-Nxo"/>
+                            <constraint firstItem="Y40-3i-AI9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RO9-BD-V13"/>
+                            <constraint firstItem="Y40-3i-AI9" firstAttribute="top" secondItem="Txm-bG-IsC" secondAttribute="bottom" constant="32" id="cmt-JQ-hHh"/>
+                            <constraint firstItem="Txm-bG-IsC" firstAttribute="leading" secondItem="Y40-3i-AI9" secondAttribute="leading" id="d4m-lc-cfh"/>
+                            <constraint firstItem="qJG-JC-lNw" firstAttribute="top" secondItem="Y40-3i-AI9" secondAttribute="bottom" constant="87" id="ueG-hl-xKb"/>
+                            <constraint firstItem="xmx-i7-yYN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vFb-gq-WVc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="languages" destination="qJG-JC-lNw" id="51W-yV-xCA"/>
+                        <outlet property="original" destination="xmx-i7-yYN" id="dfo-BN-n56"/>
+                        <outlet property="translation" destination="Txm-bG-IsC" id="ign-Er-EJd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="377"/>
+        </scene>
+    </scenes>
+</document>
